@@ -152,4 +152,177 @@
         }
 
         .card-projeto:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: var(--cor-destaque);
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--cor-destaque);
+            background-color: rgba(26, 115, 232, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .card-projeto h3 {
+            color: var(--cor-titulo);
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        /* CURRÍCULO E ATIVIDADES */
+        .lista-atividades {
+            list-style: none;
+        }
+
+        .lista-atividades li {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .btn-link {
+            color: var(--cor-destaque);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        /* RODAPÉ E CONTATO */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            background-color: var(--bg-secao-alternativa);
+        }
+
+        .contato-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin: 24px 0;
+            flex-wrap: wrap;
+        }
+
+        .contato-links a {
+            color: var(--cor-destaque);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .contato-links a:hover {
+            text-decoration: underline;
+            color: var(--cor-hover);
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #70757a;
+            margin-top: 40px;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .grid-projetos { grid-template-columns: 1fr; }
+            .info-rapida { flex-direction: column; gap: 10px; }
+            .nav-container { flex-direction: column; gap: 12px; }
+            nav a { margin: 0 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Augusto Gonçalves</div>
+            <nav>
+                <a href="#sobre">Sobre mim</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#atividades">Currículo</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container hero">
+            <h1>Augusto Gonçalves</h1>
+            <div class="info-rapida">
+                <div class="info-item">🎂 25 anos</div>
+                <div class="info-item">📞 (61) 99151-7845</div>
+                <div class="info-item">✉️&nbsp;<a href="mailto:Augusto.goncalves@sempreceub.com">Augusto.goncalves@sempreceub.com</a></div>
+            </div>
+        </section>
+
+        <section id="sobre" class="container secao">
+            <h2 class="secao-titulo">Sobre mim</h2>
+            <p class="sobre-texto">
+                Sou graduando em Ciência da Computação e estou iniciando minha trajetória com foco em Cibersegurança. Atualmente, mergulho nos fundamentos de Banco de Dados e Linguagem C, buscando transformar a teoria em prática. Meu objetivo é conquistar uma oportunidade de estágio onde eu possa colaborar com a equipe e acelerar meu aprendizado técnico. Acredito que a prática é o melhor caminho para me tornar um profissional mais rápido e melhor que o mercado exige tanto!
+            </p>
+        </section>
+
+        <section id="projetos" class="secao alternativa">
+            <div class="container">
+                <h2 class="secao-titulo">Projetos</h2>
+                <div class="grid-projetos">
+                    
+                    <div class="card-projeto">
+                        <span class="card-tag">Mídia & Entretenimento</span>
+                        <h3>Podcast Deixafluir</h3>
+                        <p>Em meados de 2021, Eu e mais dois amigos resolvemos criar um podcast em Brasília.</p>
+                    </div>
+
+                    <div class="card-projeto">
+                        <span class="card-tag">E-commerce</span>
+                        <h3>Loja De Quadros Refinatto</h3>
+                        <p>Em 2024, também com um amigo criei a Refinatto Art, que vendia quadros decorativos personalizados.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="atividades" class="container secao">
+            <h2 class="secao-titulo">Currículo</h2>
+            <ul class="lista-atividades">
+                <li>
+                    <div>
+                        <strong style="color: var(--cor-titulo); font-size: 1.1rem;">Trabalhos e Atividades</strong>
+                        <div style="font-size: 0.9rem; color: #70757a; margin-top: 4px;">Histórico académico e conquistas práticas</div>
+                    </div>
+                    <span class="btn-link">[ Ativo ]</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <h2 class="secao-titulo" style="text-align: center;">Contato</h2>
+            <p>Entre em contato ou aceda às minhas redes profissionais:</p>
+            
+            <div class="contato-links">
+                <a href="mailto:Augusto.goncalves@sempreceub.com">E-mail</a>
+                <a href="https://www.linkedin.com/in/augusto-gon%C3%A7alves-freitas-cordeiro-0177923b4/" target="_blank">LinkedIn</a>
+                <a href="tel:61991517845">Telefone</a>
+            </div>
+            
+            <p class="copyright">&copy; 2026 Augusto Gonçalves. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
